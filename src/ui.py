@@ -3,7 +3,7 @@ from tkinter import filedialog, messagebox, scrolledtext
 import os
 import sys
 import pyperclip
-from docx_processor import DocxProcessor
+from docx_processor_new import DocxXMLProcessor
 import app_info
 
 
@@ -107,7 +107,7 @@ class DocxReplacerApp:
             return
 
         try:
-            processor = DocxProcessor()
+            processor = DocxXMLProcessor()
             files_processed = processor.process_folder(folder, search_text, replace_text)
             messagebox.showinfo("Успех", f"Обработано файлов: {files_processed}")
         except Exception as e:
